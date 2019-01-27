@@ -14,7 +14,8 @@
         android:layout_height="match_parent"
         android:gravity="center_horizontal"
         android:orientation="vertical"
-        android:paddingTop="88dp">
+        android:paddingTop="100dp"
+        android:paddingBottom="100dp">
 
         <include layout="@layout/shr_backdrop" />
     </LinearLayout>
@@ -38,14 +39,13 @@
             app:title="@string/shr_app_name" />
     </android.support.design.widget.AppBarLayout>
 
-
     <android.support.v4.widget.NestedScrollView
         android:id="@+id/product_grid"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="56dp"
         android:background="@color/productGridBackgroundColor"
-        android:elevation="8dp"
+        android:elevation="6dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <android.support.v7.widget.RecyclerView
@@ -54,5 +54,4 @@
             android:layout_height="match_parent" />
 
     </android.support.v4.widget.NestedScrollView>
-
 </FrameLayout>

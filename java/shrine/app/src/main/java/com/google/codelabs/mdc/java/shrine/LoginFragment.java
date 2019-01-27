@@ -23,6 +23,8 @@ public class LoginFragment extends Fragment {
             @NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.shr_login_fragment, container, false);
+        
+        // Snippet from "Navigate to the next Fragment" section goes here.
         final TextInputLayout passwordTextInput = view.findViewById(R.id.password_text_input);
         final TextInputEditText passwordEditText = view.findViewById(R.id.password_edit_text);
         MaterialButton nextButton = view.findViewById(R.id.next_button);
@@ -53,10 +55,11 @@ public class LoginFragment extends Fragment {
         return view;
     }
 
+    // "isPasswordValid" from "Navigate to the next Fragment" section method goes here
     /*
-        In reality, this will have more complex logic including, but not limited to, actual
-        authentication of the username and password.
-     */
+   In reality, this will have more complex logic including, but not limited to, actual
+   authentication of the username and password.
+*/
     private boolean isPasswordValid(@Nullable Editable text) {
         return text != null && text.length() >= 8;
     }

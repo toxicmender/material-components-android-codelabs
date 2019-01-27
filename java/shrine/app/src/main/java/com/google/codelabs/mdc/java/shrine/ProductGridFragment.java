@@ -14,7 +14,6 @@ import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AccelerateDecelerateInterpolator;
-
 import com.google.codelabs.mdc.java.shrine.network.ProductEntry;
 import com.google.codelabs.mdc.java.shrine.staggeredgridlayout.StaggeredProductCardRecyclerViewAdapter;
 
@@ -29,10 +28,10 @@ public class ProductGridFragment extends Fragment {
     @Override
     public View onCreateView(
             @NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // Inflate the layout for this fragment with the ProductGrid theme
+        // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.shr_product_grid_fragment, container, false);
 
-        // Set up the tool bar
+        // Set up the toolbar
         setUpToolbar(view);
 
         // Set up the RecyclerView
@@ -61,7 +60,7 @@ public class ProductGridFragment extends Fragment {
         return view;
     }
 
-    private void setUpToolbar(View view) {
+    private void setUpToolbar(@NonNull View view) {
         Toolbar toolbar = view.findViewById(R.id.app_bar);
         AppCompatActivity activity = (AppCompatActivity) getActivity();
         if (activity != null) {
@@ -81,5 +80,4 @@ public class ProductGridFragment extends Fragment {
         menuInflater.inflate(R.menu.shr_toolbar_menu, menu);
         super.onCreateOptionsMenu(menu, menuInflater);
     }
-
 }
